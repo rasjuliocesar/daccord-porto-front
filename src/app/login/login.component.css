@@ -1,0 +1,28 @@
+section {
+  color: #fff;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+    width: 60%;
+}
+
+form label {
+  text-transform: uppercase;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+form button{
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #000;
+    padding-left: 20px;
+    padding-right: 20px;
+}

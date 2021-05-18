@@ -1,0 +1,14 @@
+<section class="container conteudo">
+    <div class="col-6">
+        <form (ngSubmit)="login()">
+            <label for="email">E-mail:</label>
+            <input [(ngModel)]="autenticacao.email" name="email" type="email" class="form-control">
+            <label for="senha">Senha:</label>
+            <input [(ngModel)]="autenticacao.password" name="password" type="password" class="form-control">
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+    </div>
+    <div class="col-6">
+        <img src="../../assets/img/logo2.png" alt="Logo da Daccord">
+    </div>
+</section>

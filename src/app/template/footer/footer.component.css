@@ -1,0 +1,10 @@
+nav{
+    justify-content: center;
+}
+
+nav span{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}

@@ -1,0 +1,14 @@
+header{
+    color: #fff;
+}
+
+nav div.container-fluid{
+    justify-content: flex-start;
+}
+
+nav div.container-fluid a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}

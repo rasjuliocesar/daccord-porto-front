@@ -1,0 +1,14 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(rgb(62, 62, 62), rgb(117, 117, 117));
+}
+
+section.conteudo{
+    height: calc(100% - 111.2px);
+    display: flex;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
