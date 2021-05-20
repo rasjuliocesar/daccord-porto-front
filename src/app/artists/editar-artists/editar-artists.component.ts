@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Artists } from 'src/app/models/artists.model';
+import { ArtistsService } from 'src/app/services/artists.service';
 
 @Component({
   selector: 'app-editar-artists',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarArtistsComponent implements OnInit {
 
-  constructor() { }
+  artists: Artists;
+
+  constructor(private artistsService: ArtistsService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')
+    this.artistsService.lerPorId(id).subscribe(artists => {
+      this.artists = artists
+    })
+  }
+
+  editar(): void {
+    this.artistsService.editar(this.artists).subscribe(() => {
+      this.artistsService.mensagem('Artista Atualizado com sucesso!')
+      this.router.navigate(['/artists'])
+    })
+  }
+  cancelar(): void {
+    this.router.navigate(['/artists'])
   }
 
 }
