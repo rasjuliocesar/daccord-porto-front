@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Artists } from './artists';
+import { User } from '../models/user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ArtistsService {
-  private api = 'http://localhost:8080/artists';
+export class UserService {
+  private api = 'http://localhost:8080/user';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -34,18 +34,13 @@ export class ArtistsService {
     //private messageService: MessageService
   ) {}
 
-  getArtists(): Observable<Artists[]> {
-    return this.http.get<Artists[]>(this.api + '/all').pipe(
-      tap((_) => this.log('Artists Recuperados')),
-      catchError(this.handleError<Artists[]>('getArtists', []))
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.api + '/all').pipe(
+      tap((_) => this.log('Users Recuperados')),
+      catchError(this.handleError<User[]>('getUsers', []))
     );
   }
-
-  //getCliente(id: number): Observable<Cliente> {
-  // TODO: send the message _after_ fetching the hero
-  //this.messageService.add(`HeroService: fetched hero id=${id}`);
-  //return of(CLIENTES.find((cliente) => cliente.id === id));
-  //}
+  
   /**
    * Handle Http operation that failed.
    * Let the app continue.
@@ -66,6 +61,6 @@ export class ArtistsService {
   }
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    //this.messageService.add(`ClienteService: ${message}`);
+    //this.messageService.add(`UserService: ${message}`);
   }
 }

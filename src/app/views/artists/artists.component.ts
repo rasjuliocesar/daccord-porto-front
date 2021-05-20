@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Artists } from '../artists';
-import { ArtistsService } from '../artists.service';
+import { Artists } from '../../models/artists.model';
+import { ArtistsService } from '../../services/artists.service';
 
 @Component({
   selector: 'app-artists',

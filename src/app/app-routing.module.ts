@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginComponent } from './login/login.component';
-import { UserComponent } from './user/user.component';
-import { ArtistsComponent } from './artists/artists.component';
-import { CountersComponent } from './counters/counters.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { LoginComponent } from './views/login/login.component';
+import { UserComponent } from './views/user/user.component';
+import { ArtistsComponent } from './views/artists/artists.component';
+import { CountersComponent } from './views/counters/counters.component';
 
 const routes: Routes = [
   {

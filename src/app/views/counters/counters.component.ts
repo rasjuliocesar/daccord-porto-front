@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Counters } from '../counters';
-import { CountersService } from '../counters.service';
+import { Counters } from '../../models/counters.model';
+import { CountersService } from '../../services/counters.service';
 
 @Component({
   selector: 'app-counters',

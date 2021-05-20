@@ -23,11 +23,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { NavComponent } from './template/nav/nav.component';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserComponent } from './user/user.component';
-import { ArtistsComponent } from './artists/artists.component';
-import { CountersComponent } from './counters/counters.component';
+import { LoginComponent } from './views/login/login.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { UserComponent } from './views/user/user.component';
+import { ArtistsComponent } from './views/artists/artists.component';
+import { CountersComponent } from './views/counters/counters.component';
+import { CriarArtistsComponent } from './artists/criar-artists/criar-artists.component';
+import { DeletarArtistsComponent } from './artists/deletar-artists/deletar-artists.component';
+import { EditarArtistsComponent } from './artists/editar-artists/editar-artists.component';
+import { LerArtistsComponent } from './artists/ler-artists/ler-artists.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import { CountersComponent } from './counters/counters.component';
     UserComponent,
     ArtistsComponent,
     CountersComponent,
+    CriarArtistsComponent,
+    DeletarArtistsComponent,
+    EditarArtistsComponent,
+    LerArtistsComponent,
   ],
   imports: [
     BrowserModule,
