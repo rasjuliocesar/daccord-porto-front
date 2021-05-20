@@ -10,7 +10,7 @@ import { ArtistsService } from 'src/app/services/artists.service';
 })
 export class CriarArtistsComponent implements OnInit {
 
-  artists: Artists={
+  artists: Artists = {
     artist_name: '',
     artist_genre: ''
   }

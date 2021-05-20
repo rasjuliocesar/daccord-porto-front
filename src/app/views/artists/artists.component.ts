@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Artists } from '../../models/artists.model';
 import { ArtistsService } from '../../services/artists.service';
@@ -11,18 +12,13 @@ import { ArtistsService } from '../../services/artists.service';
 export class ArtistsComponent implements OnInit {
   artists: Artists[];
 
-  constructor(
-    private artistsService: ArtistsService
-  ) {}
+  constructor(private router: Router) { }
 
-  ngOnInit() {
-    this.getArtists();
+  ngOnInit(): void {
   }
 
-  getArtists(): void {
-    this.artistsService
-    .getArtists()
-    .subscribe((artist) => (this.artists = artist));
+  criarArtists(): void {
+    this.router.navigate(['/artists/add'])
   }
 
 }

@@ -38,7 +38,7 @@ export class ArtistsService {
     return this.http.put<Artists>(url, artists)
   }
 
-  deletar(id: number): Observable <Artists>{
+  deletar(id: string): Observable <Artists>{
     const url= `${this.api}/${id}`
     return this.http.delete<Artists>(url)
   }
