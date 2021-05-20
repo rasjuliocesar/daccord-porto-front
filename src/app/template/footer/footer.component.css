@@ -1,10 +1,15 @@
-nav{
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
     justify-content: center;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(117, 117, 117);
 }
 
-nav span{
-    color: #fff;
+span{
     font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 700;
 }

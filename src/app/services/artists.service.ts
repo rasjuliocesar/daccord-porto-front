@@ -21,11 +21,11 @@ export class ArtistsService {
   }
 
   ler(): Observable<Artists[]>{
-    return this.http.get<Artists[]>(this.api)
+    return this.http.get<Artists[]>(this.api  + '/all')
   }
 
   criar(artists: Artists): Observable<Artists>{
-    return this.http.post<Artists>(this.api, artists)
+    return this.http.post<Artists>(this.api + '/add', artists)
   }
 
   lerPorId(id: string): Observable <Artists>{
@@ -34,12 +34,12 @@ export class ArtistsService {
   }
 
   editar(artists: Artists): Observable<Artists>{
-    const url= `${this.api}/${artists._id}`
+    const url= `${this.api + '/update'}/${artists._id}`
     return this.http.put<Artists>(url, artists)
   }
 
   deletar(id: string): Observable <Artists>{
-    const url= `${this.api}/${id}`
+    const url= `${this.api + '/delete'}/${id}`
     return this.http.delete<Artists>(url)
   }
 }

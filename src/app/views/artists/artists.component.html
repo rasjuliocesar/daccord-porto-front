@@ -1,20 +1,6 @@
-<h2>Lista Artistas - Cadastrados</h2>
-<hr />
+<button mat-raised-button (click)="criarArtists()" color="primary">
+    <i class="material-icons">add</i>
+    Novo Artista
+</button>
 
-<table class="table table-sm table-striped">
-
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Artista Gênero</th>
-            <th scope="col">Artista Nome</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let artist of artists">
-            <td scope="row">{{artist._id}}</td>
-            <td scope="row">{{artist.artist_genre}}</td>
-            <td scope="row">{{artist.artist_name}}</td>
-        </tr>
-    </tbody>
-</table>
+<app-ler-artists></app-ler-artists>

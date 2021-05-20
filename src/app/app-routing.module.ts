@@ -5,6 +5,9 @@ import { LoginComponent } from './views/login/login.component';
 import { UserComponent } from './views/user/user.component';
 import { ArtistsComponent } from './views/artists/artists.component';
 import { CountersComponent } from './views/counters/counters.component';
+import { CriarArtistsComponent } from './artists/criar-artists/criar-artists.component';
+import { EditarArtistsComponent } from './artists/editar-artists/editar-artists.component';
+import { DeletarArtistsComponent } from './artists/deletar-artists/deletar-artists.component';
 
 const routes: Routes = [
   {
@@ -27,6 +30,18 @@ const routes: Routes = [
   {
     path: 'artists',
     component: ArtistsComponent,
+  },
+  {
+    path: "artists/add",
+    component: CriarArtistsComponent
+  },
+  {
+    path: "artists/update/:_id",
+    component: EditarArtistsComponent
+  },
+  {
+    path: "artists/delete/:_id",
+    component: DeletarArtistsComponent
   },
   {
     path: 'counters',

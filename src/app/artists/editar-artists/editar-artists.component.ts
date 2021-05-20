@@ -17,7 +17,7 @@ export class EditarArtistsComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
+    const id = this.route.snapshot.paramMap.get('_id')
     this.artistsService.lerPorId(id).subscribe(artists => {
       this.artists = artists
     })
