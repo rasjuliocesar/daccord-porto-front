@@ -25,6 +25,9 @@ import { FooterComponent } from './template/footer/footer.component';
 import { NavComponent } from './template/nav/nav.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserComponent } from './user/user.component';
+import { ArtistsComponent } from './artists/artists.component';
+import { CountersComponent } from './counters/counters.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NavComponent,
     LoginComponent,
     DashboardComponent,
+    UserComponent,
+    ArtistsComponent,
+    CountersComponent,
   ],
   imports: [
     BrowserModule,
