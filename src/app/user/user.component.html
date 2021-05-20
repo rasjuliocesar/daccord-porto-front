@@ -1,0 +1,26 @@
+<h2>Lista Usuários - Cadastrados</h2>
+<hr />
+
+<table class="table table-sm table-striped">
+
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Active</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Name</th>
+            <th scope="col">PassWord</th>
+            <th scope="col">User Login</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td scope="row">{{user._id}}</td>
+            <td scope="row">{{user.active}}</td>
+            <td scope="row">{{user.email}}</td>
+            <td scope="row">{{user.name}}</td>
+            <td scope="row">{{user.password}}</td>
+            <td scope="row">{{user.userLogin}}</td>
+        </tr>
+    </tbody>
+</table>
