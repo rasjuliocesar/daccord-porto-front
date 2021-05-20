@@ -1,0 +1,22 @@
+<h2>Lista Counters - Dados para Gráfico</h2>
+<hr />
+
+<table class="table table-sm table-striped">
+
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Quantidade Artistas</th>
+            <th scope="col">Quantidade Músicas</th>
+            <th scope="col">Quantidade Usuários</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let counter of counters">
+            <td scope="row">{{counter._id}}</td>
+            <td scope="row">{{counter.artists}}</td>
+            <td scope="row">{{counter.song}}</td>
+            <td scope="row">{{counter.users}}</td>
+        </tr>
+    </tbody>
+</table>
