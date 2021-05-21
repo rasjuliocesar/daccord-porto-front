@@ -10,7 +10,10 @@ import { ArtistsService } from 'src/app/services/artists.service';
 })
 export class DeletarArtistsComponent implements OnInit {
 
-  artists: Artists;
+  artists: Artists = {
+    artist_name: '',
+    artist_genre: ''
+  }
 
   constructor(private artistsService: ArtistsService,
     private router: Router,

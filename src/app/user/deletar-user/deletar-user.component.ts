@@ -10,7 +10,13 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class DeletarUserComponent implements OnInit {
 
-  user: User;
+  user: User = {
+    active: null,
+    email: '',
+    name: '',
+    password: '',
+    admin: null
+  }
 
   constructor(private userService: UserService,
     private router: Router,

@@ -14,11 +14,11 @@
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Ativo" [(value)]="user.active" name="ativo" disabled>
+            <input matInput placeholder="Ativo" [(ngModel)]="user.active" name="ativo" disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Administrador" [(value)]="user.admin" name="adm" disabled>
+            <input matInput placeholder="Administrador" [(ngModel)]="user.admin" name="adm" disabled>
         </mat-form-field>
     </form>
 
