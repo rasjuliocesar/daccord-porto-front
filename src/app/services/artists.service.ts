@@ -34,7 +34,7 @@ export class ArtistsService {
   }
 
   editar(artists: Artists): Observable<Artists>{
-    const url= `${this.api + '/update'}/${artists._id}`
+    const url= `${this.api + '/update'}`
     return this.http.put<Artists>(url, artists)
   }
 

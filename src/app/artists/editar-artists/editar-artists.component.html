@@ -8,6 +8,14 @@
         <mat-form-field>
             <input matInput placeholder="Gênero" [(ngModel)]="artists.artist_genre" name="genero">
         </mat-form-field>
+
+<!--    <mat-form-field>
+            <mat-label>Gênero</mat-label>
+            <mat-select name="genero" [(ngModel)]="artists.artist_genre">
+                <mat-option value="false">Lista de gêneros</mat-option>
+            </mat-select>
+        </mat-form-field>
+-->
     </form>
 
     <button mat-raised-button (click)="editar()" color="warn">
