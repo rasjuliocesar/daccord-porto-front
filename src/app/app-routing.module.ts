@@ -8,6 +8,9 @@ import { CountersComponent } from './views/counters/counters.component';
 import { CriarArtistsComponent } from './artists/criar-artists/criar-artists.component';
 import { EditarArtistsComponent } from './artists/editar-artists/editar-artists.component';
 import { DeletarArtistsComponent } from './artists/deletar-artists/deletar-artists.component';
+import { CriarUserComponent } from './user/criar-user/criar-user.component';
+import { EditarUserComponent } from './user/editar-user/editar-user.component';
+import { DeletarUserComponent } from './user/deletar-user/deletar-user.component';
 
 const routes: Routes = [
   {
@@ -24,10 +27,6 @@ const routes: Routes = [
     component: DashboardComponent,
   },
   {
-    path: 'user',
-    component: UserComponent,
-  },
-  {
     path: 'artists',
     component: ArtistsComponent,
   },
@@ -42,6 +41,22 @@ const routes: Routes = [
   {
     path: "artists/delete/:_id",
     component: DeletarArtistsComponent
+  },
+  {
+    path: 'user',
+    component: UserComponent,
+  },
+  {
+    path: "user/add",
+    component: CriarUserComponent
+  },
+  {
+    path: "user/update/:_id",
+    component: EditarUserComponent
+  },
+  {
+    path: "user/delete/:_id",
+    component: DeletarUserComponent
   },
   {
     path: 'counters',

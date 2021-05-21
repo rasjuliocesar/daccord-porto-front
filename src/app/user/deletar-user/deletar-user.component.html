@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-title>Deletar Usuário</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="user.name" name="nome" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="user.email" name="email" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Senha" [(ngModel)]="user.password" name="senha" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Ativo" [(value)]="user.active" name="ativo" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Administrador" [(value)]="user.userLogin" name="adm" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deletar()" color="accent">
+        Deletar
+    </button>
+
+    <button mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+</mat-card>

@@ -32,6 +32,10 @@ import { CriarArtistsComponent } from './artists/criar-artists/criar-artists.com
 import { DeletarArtistsComponent } from './artists/deletar-artists/deletar-artists.component';
 import { EditarArtistsComponent } from './artists/editar-artists/editar-artists.component';
 import { LerArtistsComponent } from './artists/ler-artists/ler-artists.component';
+import { CriarUserComponent } from './user/criar-user/criar-user.component';
+import { LerUserComponent } from './user/ler-user/ler-user.component';
+import { DeletarUserComponent } from './user/deletar-user/deletar-user.component';
+import { EditarUserComponent } from './user/editar-user/editar-user.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,10 @@ import { LerArtistsComponent } from './artists/ler-artists/ler-artists.component
     DeletarArtistsComponent,
     EditarArtistsComponent,
     LerArtistsComponent,
+    CriarUserComponent,
+    LerUserComponent,
+    DeletarUserComponent,
+    EditarUserComponent,
   ],
   imports: [
     BrowserModule,
