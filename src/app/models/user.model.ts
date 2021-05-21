@@ -1,8 +1,8 @@
 export interface User {
     _id?: string;
-    active?: Boolean;
+    active?: boolean;
     email?: string;
     name?: string;
     password?: string;
-    userLogin?: number;
+    admin?: boolean;
 }

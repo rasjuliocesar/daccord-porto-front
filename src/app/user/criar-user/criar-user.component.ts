@@ -15,7 +15,7 @@ user: User = {
   email: '',
   name: '',
   password: '',
-  userLogin: 1,
+  admin: false
 }
 
   constructor(private userService: UserService, private router: Router) { }

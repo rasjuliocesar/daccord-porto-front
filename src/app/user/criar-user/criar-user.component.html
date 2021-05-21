@@ -16,16 +16,16 @@
         <mat-form-field>
             <mat-label>Ativo</mat-label>
             <mat-select name="ativo" [(ngModel)]="user.active">
-                <mat-option value="false">Não</mat-option>
                 <mat-option value="true">Sim</mat-option>
+                <mat-option value="false">Não</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Administrador</mat-label>
-            <mat-select name="adm" [(ngModel)]="user.userLogin">
-                <mat-option value=1>Não</mat-option>
-                <mat-option value=0>Sim</mat-option>
+            <mat-select name="adm" [(ngModel)]="user.admin">
+                <mat-option value="true">Sim</mat-option>
+                <mat-option value="false">Não</mat-option>
             </mat-select>
         </mat-form-field>
 
