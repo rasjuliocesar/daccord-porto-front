@@ -36,6 +36,7 @@ export class CountersService {
 
   getCounters(): Observable<Counters[]> {
     const id = '/Bp1IsLTDVtUfa4fAfC7C';
+    console.log(this.api +id);
     return this.http.get<Counters[]>(this.api + id).pipe(
       tap((_) => this.log('Counters Recuperados')),
       catchError(this.handleError<Counters[]>('getCounters', []))

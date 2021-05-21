@@ -1,11 +1,16 @@
-header{
-    color: #fff;
+.header{
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    background-color: #555555;
+  }
+  
+span{
+    margin: 0 auto;
 }
 
-nav div.container-fluid{
-    justify-content: center;
-}
-
-img{
-    height: 75px;
-}
+img {
+    height: 60px;
+ }
+  
+  
