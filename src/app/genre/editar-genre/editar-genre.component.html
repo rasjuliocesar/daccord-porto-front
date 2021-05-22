@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Alterar Gênero</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="genre.name" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Gênero" [(ngModel)]="genre.id3" name="genero">
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="editar()" color="warn">
+        Atualizar
+    </button>
+
+    <button mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+</mat-card>

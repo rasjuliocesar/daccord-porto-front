@@ -36,6 +36,10 @@ import { CriarUserComponent } from './user/criar-user/criar-user.component';
 import { LerUserComponent } from './user/ler-user/ler-user.component';
 import { DeletarUserComponent } from './user/deletar-user/deletar-user.component';
 import { EditarUserComponent } from './user/editar-user/editar-user.component';
+import { GenreComponent } from './views/genre/genre.component';
+import { CriarGenreComponent } from './genre/criar-genre/criar-genre.component';
+import { EditarGenreComponent } from './genre/editar-genre/editar-genre.component'
+import { DeletarGenreComponent } from './genre/deletar-genre/deletar-genre.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +60,10 @@ import { EditarUserComponent } from './user/editar-user/editar-user.component';
     LerUserComponent,
     DeletarUserComponent,
     EditarUserComponent,
+    GenreComponent,
+    CriarGenreComponent,
+    DeletarGenreComponent,
+    EditarGenreComponent
   ],
   imports: [
     BrowserModule,
