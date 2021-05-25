@@ -10,7 +10,7 @@ import { GenreService } from 'src/app/services/genre.service';
 export class LerGenreComponent implements OnInit {
 
   genre: Genre[]
-  displayedColumns = ['nome', 'generoid3', 'acoes'];
+  displayedColumns = ['id3', 'nome', 'acoes'];
 
   constructor(private genreService: GenreService) { }
 

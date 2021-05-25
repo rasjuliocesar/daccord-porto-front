@@ -40,6 +40,7 @@ import { GenreComponent } from './views/genre/genre.component';
 import { CriarGenreComponent } from './genre/criar-genre/criar-genre.component';
 import { EditarGenreComponent } from './genre/editar-genre/editar-genre.component'
 import { DeletarGenreComponent } from './genre/deletar-genre/deletar-genre.component';
+import { LerGenreComponent } from './genre/ler-genre/ler-genre.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { DeletarGenreComponent } from './genre/deletar-genre/deletar-genre.compo
     UserComponent,
     ArtistsComponent,
     CountersComponent,
+    GenreComponent,
     CriarArtistsComponent,
     DeletarArtistsComponent,
     EditarArtistsComponent,
@@ -60,10 +62,10 @@ import { DeletarGenreComponent } from './genre/deletar-genre/deletar-genre.compo
     LerUserComponent,
     DeletarUserComponent,
     EditarUserComponent,
-    GenreComponent,
     CriarGenreComponent,
     DeletarGenreComponent,
-    EditarGenreComponent
+    EditarGenreComponent,
+    LerGenreComponent
   ],
   imports: [
     BrowserModule,
