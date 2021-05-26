@@ -41,6 +41,8 @@ import { CriarGenreComponent } from './genre/criar-genre/criar-genre.component';
 import { EditarGenreComponent } from './genre/editar-genre/editar-genre.component'
 import { DeletarGenreComponent } from './genre/deletar-genre/deletar-genre.component';
 import { LerGenreComponent } from './genre/ler-genre/ler-genre.component';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -86,6 +88,8 @@ import { LerGenreComponent } from './genre/ler-genre/ler-genre.component';
     MatTableModule,
     MatDatepickerModule,
     MatDialogModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

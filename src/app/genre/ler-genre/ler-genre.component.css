@@ -1,18 +1,21 @@
+mat-paginator{
+margin-bottom: 150px;
+}
+  
 .full-width-table {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 150px;
-  }
-  
-  .editar{
-    color: #ffe100;
-  }
-  
-  .deletar{
-    margin-left: 10px;
-    color: #ff0000;
-  }
+  width: 100%;
+  margin-top: 20px;
+}
 
-  h5{
-      font-size: 16px;
-  }
+.editar{
+  color: #ffe100;
+}
+
+.deletar{
+  margin-left: 10px;
+  color: #ff0000;
+}
+
+h5{
+    font-size: 16px;
+}
