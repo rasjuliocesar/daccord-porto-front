@@ -41,6 +41,11 @@ import { CriarGenreComponent } from './genre/criar-genre/criar-genre.component';
 import { EditarGenreComponent } from './genre/editar-genre/editar-genre.component'
 import { DeletarGenreComponent } from './genre/deletar-genre/deletar-genre.component';
 import { LerGenreComponent } from './genre/ler-genre/ler-genre.component';
+import { SongComponent } from './views/song/song.component';
+import { CriarSongComponent } from './song/criar-song/criar-song.component';
+import { EditarSongComponent } from './song/editar-song/editar-song.component'
+import { DeletarSongComponent } from './song/deletar-song/deletar-song.component';
+import { LerSongComponent } from './song/ler-song/ler-song.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
@@ -67,7 +72,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     CriarGenreComponent,
     DeletarGenreComponent,
     EditarGenreComponent,
-    LerGenreComponent
+    LerGenreComponent,
+    SongComponent,
+    CriarSongComponent,
+    EditarSongComponent,
+    DeletarSongComponent,
+    LerSongComponent
   ],
   imports: [
     BrowserModule,

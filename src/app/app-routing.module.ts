@@ -15,6 +15,10 @@ import { GenreComponent } from './views/genre/genre.component';
 import { CriarGenreComponent } from './genre/criar-genre/criar-genre.component';
 import { EditarGenreComponent } from './genre/editar-genre/editar-genre.component'
 import { DeletarGenreComponent } from './genre/deletar-genre/deletar-genre.component';
+import { SongComponent } from './views/song/song.component';
+import { CriarSongComponent } from './song/criar-song/criar-song.component';
+import { EditarSongComponent } from './song/editar-song/editar-song.component'
+import { DeletarSongComponent } from './song/deletar-song/deletar-song.component';
 
 const routes: Routes = [
   {
@@ -81,6 +85,22 @@ const routes: Routes = [
   {
     path: "genre/delete/:_id",
     component: DeletarGenreComponent
+  },
+  {
+    path: 'song',
+    component: SongComponent,
+  },
+  {
+    path: "song/add",
+    component: CriarSongComponent
+  },
+  {
+    path: "song/update/:_id",
+    component: EditarSongComponent
+  },
+  {
+    path: "song/delete/:_id",
+    component: DeletarSongComponent
   }
 ];
 
