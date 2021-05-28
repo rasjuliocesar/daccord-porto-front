@@ -2,13 +2,28 @@
     <mat-card-title>Deletar Artista</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="artists.artist_name" name="nome" disabled>
+            <input matInput placeholder="Titulo" [(ngModel)]="song.title" name="title" disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Gênero" [(ngModel)]="artists.artist_genre" name="genero" disabled>
+            <input matInput placeholder="Nome Artista" [(ngModel)]="song.artist" name="nome_artista" disabled>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Id Artista" [(ngModel)]="song.artist_id" name="id_artista" disabled>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Bpm" [(ngModel)]="song.bpm" name="bpm" disabled>
         </mat-form-field>
 
+        <mat-form-field>
+            <input matInput placeholder="Gênero" [(ngModel)]="song.genre" name="genero" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Link Áudio" [(ngModel)]="song.link_audio" name="link_audio" disabled>
+        </mat-form-field>
     </form>
 
     <button mat-raised-button (click)="deletar()" color="accent">

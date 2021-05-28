@@ -10,7 +10,7 @@ import { SongService } from 'src/app/services/song.service';
 export class LerSongComponent implements OnInit {
 
   song: Song[]
-  displayedColumns = ['nome', 'genero', 'acoes'];
+  displayedColumns = ['titulo', 'artista', 'artista_id', 'bpm', 'genre', 'link_audio', 'acoes'];
 
   constructor(private songService: SongService) { }
 

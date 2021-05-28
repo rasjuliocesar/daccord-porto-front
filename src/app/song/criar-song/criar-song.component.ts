@@ -26,7 +26,7 @@ export class CriarSongComponent implements OnInit {
 
   criar(): void {
     this.songService.criar(this.song).subscribe(() => {
-      this.songService.mensagem("M´sica criado!")
+      this.songService.mensagem("Música criada!")
       this.router.navigate(['/song'])
     })
   }

@@ -1,17 +1,33 @@
 <mat-card>
-    <mat-card-title>Alterar Artistas</mat-card-title>
+    <mat-card-title>Alterar Música</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="artists.artist_name" name="nome">
+            <input matInput placeholder="Titulo" [(ngModel)]="song.title" name="title">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Gênero" [(ngModel)]="artists.artist_genre" name="genero">
+            <input matInput placeholder="Nome Artista" [(ngModel)]="song.artist" name="nome_artista">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Id Artista" [(ngModel)]="song.artist_id" name="id_artista">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Bpm" [(ngModel)]="song.bpm" name="bpm">
         </mat-form-field>
 
-<!--    <mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Gênero" [(ngModel)]="song.genre" name="genero">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Link Áudio" [(ngModel)]="song.link_audio" name="link_audio">
+        </mat-form-field>
+
+        <!--    <mat-form-field>
             <mat-label>Gênero</mat-label>
-            <mat-select name="genero" [(ngModel)]="artists.artist_genre">
+            <mat-select name="genero" [(ngModel)]="song.genre">
                 <mat-option value="false">Lista de gêneros</mat-option>
             </mat-select>
         </mat-form-field>
