@@ -23,7 +23,7 @@ import { DeletarSongComponent } from './song/deletar-song/deletar-song.component
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
   {

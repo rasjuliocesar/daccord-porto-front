@@ -9,6 +9,108 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { packages: [ 'corechart' ] })
+    google.charts.setOnLoadCallback(drawChartGenre)
+    google.charts.setOnLoadCallback(drawChartDificuldade)
+    google.charts.setOnLoadCallback(drawChartAcorde)
+    google.charts.setOnLoadCallback(drawChartRankingArtistas)
+
+    function drawChartGenre() {
+        const container = document.querySelector('#genre')
+        const data = new google.visualization.arrayToDataTable([
+            [ 'Character', 'Ki' ],
+            [ 'Rock', 10000 ],
+            [ 'Reggae', 9000 ],
+            [ 'Pop', 8000 ],
+            [ 'Eletrônico', 5000 ],
+            [ 'Sertanejo', 21000 ]
+        ])
+        const options = {
+            title: 'Músicas  por Gênero',
+            height: 400,
+            width: 720
+        }
+        
+        const genre = new google.visualization.PieChart(container)
+        genre.draw(data, options)
+    }
+    
+    function drawChartDificuldade() {
+        const container = document.querySelector('#dificuldade')
+        const data = new google.visualization.arrayToDataTable([
+            [ 'Character', ''],
+            [ 'Super Fácil', 10000 ],
+            [ 'Fácil', 9000 ],
+            [ 'Médio', 8000 ],
+            [ 'Difícil', 5000 ]
+        ])
+        const options = {
+            title: 'Músicas  por Dificuldade',
+            height: 400,
+            width: 720
+        }
+
+        // const dificuldade = new google.visualization.ColumnChart(container)
+        const dificuldade = new google.visualization.BarChart(container)
+        // const dificuldade = new google.visualization.LineChart(container)
+        // const dificuldade = new google.visualization.PieChart(container)
+        dificuldade.draw(data, options)
+    }
+    
+    function drawChartAcorde() {
+        const container = document.querySelector('#acorde')
+        const data = new google.visualization.arrayToDataTable([
+            [ 'Character', '' ],
+            [ '0-3', 100 ],
+            [ '4-5', 90 ],
+            [ '6-8', 280 ],
+            [ '9-12', 150 ],
+            [ 'mais', 210 ]
+        ])
+        const options = {
+            title: 'Músicas  por Quantidade de Acordes',
+            height: 400,
+            width: 720
+        }
+
+        const acorde = new google.visualization.ColumnChart(container)
+        // const chart = new google.visualization.BarChart(container)
+        // const chart = new google.visualization.LineChart(container)
+        // const genre = new google.visualization.PieChart(container)
+        acorde.draw(data, options)
+    }
+    
+    function drawChartRankingArtistas() {
+        const container = document.querySelector('#rankingArtistas')
+        const data = new google.visualization.arrayToDataTable([
+            [ 'Character', 'Ki' ],
+            [ 'Pearl Jam', 100 ],
+            [ 'O Rappa', 9 ],
+            [ 'Anitta', 8 ],
+            [ 'Alok', 5 ],
+            [ 'Leonardo', 70 ],
+            ['Marília Mendonça', 20 ],
+            ['Charllie Brown Jr.', 30 ],
+            ['Lenine', 20 ],
+            ['Gonzaguinha', 50 ],
+            ['Mudo Bita', 85 ],
+            ['Titãs', 10 ]
+        ])
+        const options = {
+            title: 'Músicas  por Artistas',
+            height: 400,
+            width: 720
+        }
+
+        // const chart = new google.visualization.ColumnChart(container)
+        // const chart = new google.visualization.BarChart(container)
+        // const chart = new google.visualization.LineChart(container)
+        const rankingArtistas = new google.visualization.PieChart(container)
+        rankingArtistas.draw(data, options)
+    }
+</script>
 </head>
 <body>
   <app-root></app-root>

@@ -48,6 +48,7 @@ import { DeletarSongComponent } from './song/deletar-song/deletar-song.component
 import { LerSongComponent } from './song/ler-song/ler-song.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { LerDashboardComponent } from './dashboard/ler-dashboard/ler-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     CriarSongComponent,
     EditarSongComponent,
     DeletarSongComponent,
-    LerSongComponent
+    LerSongComponent,
+    LerDashboardComponent
   ],
   imports: [
     BrowserModule,
