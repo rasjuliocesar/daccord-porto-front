@@ -10,7 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
+  <script type="text/javascript">
+    const height = 300;
+    const width = 550;
+
     google.charts.load('current', { packages: [ 'corechart' ] })
     google.charts.setOnLoadCallback(drawChartGenre)
     google.charts.setOnLoadCallback(drawChartDificuldade)
@@ -29,8 +32,8 @@
         ])
         const options = {
             title: 'Músicas  por Gênero',
-            height: 400,
-            width: 720
+            height: height,
+            width: width
         }
         
         const genre = new google.visualization.PieChart(container)
@@ -48,8 +51,8 @@
         ])
         const options = {
             title: 'Músicas  por Dificuldade',
-            height: 400,
-            width: 720
+            height: height,
+            width: width
         }
 
         // const dificuldade = new google.visualization.ColumnChart(container)
@@ -71,8 +74,8 @@
         ])
         const options = {
             title: 'Músicas  por Quantidade de Acordes',
-            height: 400,
-            width: 720
+            height: height,
+            width: width
         }
 
         const acorde = new google.visualization.ColumnChart(container)
@@ -100,8 +103,8 @@
         ])
         const options = {
             title: 'Músicas  por Artistas',
-            height: 400,
-            width: 720
+            height: height,
+            width: width
         }
 
         // const chart = new google.visualization.ColumnChart(container)
@@ -110,7 +113,7 @@
         const rankingArtistas = new google.visualization.PieChart(container)
         rankingArtistas.draw(data, options)
     }
-</script>
+  </script>
 </head>
 <body>
   <app-root></app-root>
