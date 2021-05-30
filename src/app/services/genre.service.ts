@@ -42,4 +42,8 @@ export class GenreService {
     const url= `${this.api + '/delete'}/${id}`
     return this.http.delete<Genre>(url)
   }
+
+  contarGeneros(): Observable<Genre[]>{
+    return this.http.get<Genre[]>(this.api  + '/count/genre')
+  }
 }

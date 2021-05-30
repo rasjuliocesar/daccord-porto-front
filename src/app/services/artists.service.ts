@@ -42,4 +42,8 @@ export class ArtistsService {
     const url= `${this.api + '/delete'}/${id}`
     return this.http.delete<Artists>(url)
   }
+
+  contarArtistas(): Observable<Artists[]>{
+    return this.http.get<Artists[]>(this.api  + '/count/artist')
+  }
 }

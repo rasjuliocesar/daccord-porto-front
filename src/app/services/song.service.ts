@@ -43,4 +43,8 @@ export class SongService {
     const url= `${this.api + '/delete'}/${id}`
     return this.http.delete<Song>(url)
   }
+
+  contarMusicas(): Observable<Song[]>{
+    return this.http.get<Song[]>(this.api  + '/count/song')
+  }
 }
