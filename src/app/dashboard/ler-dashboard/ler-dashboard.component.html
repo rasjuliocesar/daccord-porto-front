@@ -1,4 +1,30 @@
-<div id="genre"></div>
-<div id="acorde"></div>
-<div id="rankingArtistas"></div>
-<div id="dificuldade"></div>
+<div class="count">
+    <div id="countArtist">
+        <p>Total de Artistas</p>
+        <!--<span [(ngModel)]="contarArtistas()"></span>-->
+        <span ng-controller="contarArtistas()"></span>
+    </div>
+    <div id="countGenre">
+        <p>Total de Gêneros</p>
+        <span ng-controller="contarGeneros()"></span>
+    </div>
+    <div id="countSong">
+        <p>Total de Músicas</p>
+        <span>200</span>
+    </div>
+</div>
+<div class="chart">
+    <div class="rowChartOne">
+        <div id="genre"></div>
+        <div id="acorde"></div>
+    </div>
+    <div class="rowChartTwo">
+        <div id="rankingArtistas"></div>
+        <div id="dificuldade"></div>
+    </div>
+    <div class="rowChartThree">
+        <div id="new1">H</div>
+        <div id="new2">I</div>
+    </div>
+</div>
+
