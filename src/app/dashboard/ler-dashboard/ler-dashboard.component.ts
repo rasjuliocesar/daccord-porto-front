@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-
-//import { Song } from '../../models/song.model'
-//import { SongService } from '../../services/song.service';
-
 import { Song } from 'src/app/models/song.model';
 import { SongService } from 'src/app/services/song.service';
-import { Artists } from '../../models/artists.model'
-import { ArtistsService } from '../../services/artists.service';
-import { Genre } from '../../models/genre.model'
-import { GenreService } from '../../services/genre.service';
+import { Artists } from 'src/app/models/artists.model'
+import { ArtistsService } from 'src/app/services/artists.service';
+import { Genre } from 'src/app/models/genre.model'
+import { GenreService } from 'src/app/services/genre.service';
 
 @Component({
   selector: 'app-ler-dashboard',

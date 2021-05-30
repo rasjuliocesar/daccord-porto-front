@@ -1,16 +1,19 @@
+<app-procurar-dashboard></app-procurar-dashboard>
+
 <div class="count">
     <div id="countArtist">
         <p>Total de Artistas</p>
         <!--<span [(ngModel)]="contarArtistas()"></span>-->
-        <span ng-controller="contarArtistas()"></span>
+        <!--<span ng-controller="contarArtistas()"></span>-->
+        <span ngFor="contarArtistas()"></span>-
     </div>
     <div id="countGenre">
         <p>Total de Gêneros</p>
-        <span ng-controller="contarGeneros()"></span>
+        <span ngFor="contarGeneros()"></span>-
     </div>
     <div id="countSong">
         <p>Total de Músicas</p>
-        <span>200</span>
+        <span ngFor="contarMusicas()"></span>-
     </div>
 </div>
 <div class="chart">

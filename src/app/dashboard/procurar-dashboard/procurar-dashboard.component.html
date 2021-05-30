@@ -1,0 +1,36 @@
+<!--https://material.angular.io/components/checkbox/examples-->
+<mat-card>
+    <mat-card-content>
+      <h2 class="header">Procurar</h2>
+  
+      <section class="sectionCheckbox">
+        <mat-checkbox class="checkbox" [(ngModel)]="artista">Artista</mat-checkbox>
+        <mat-checkbox class="checkbox" [(ngModel)]="genero">Gênero</mat-checkbox>
+        <mat-checkbox class="checkbox" [(ngModel)]="musica">Música</mat-checkbox>
+      </section>
+    </mat-card-content>
+    <mat-form-field class="searching">
+        <mat-label>Search...</mat-label>
+        <input matInput type="text" [(ngModel)]="value">
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+  </mat-card>
+
+
+
+<!--
+<div class="search">
+    <p>Procurar</p>
+    <form>
+        <input type="checkbox" id="searchSong" name="song" value="song">
+        <label for="song">Música</label><br />
+        <input type="checkbox" id="searchGenre" name="genre" value="genre">
+        <label for="genre">Gênero</label><br />
+        <input type="checkbox" id="searchArtist" name="artist" value="artist">
+        <label for="artist">Artista</label>
+    </form>
+    <input type="text" class="search" />
+</div>
+-->
