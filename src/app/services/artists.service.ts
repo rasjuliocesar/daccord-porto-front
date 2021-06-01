@@ -43,7 +43,11 @@ export class ArtistsService {
     return this.http.delete<Artists>(url)
   }
 
-  contarArtistas(): Observable<Artists[]>{
-    return this.http.get<Artists[]>(this.api  + '/count/artist')
+  contarArtistas(): Observable<number>{
+    return this.http.get<number>(this.api  + '/count/artist')
+  }
+
+  buscarArtistas(tipo: number, valor: string){
+    
   }
 }

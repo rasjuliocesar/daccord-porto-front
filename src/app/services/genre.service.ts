@@ -43,7 +43,11 @@ export class GenreService {
     return this.http.delete<Genre>(url)
   }
 
-  contarGeneros(): Observable<Genre[]>{
-    return this.http.get<Genre[]>(this.api  + '/count/genre')
+  contarGeneros(): Observable<number>{
+    return this.http.get<number>(this.api  + '/count/genre')
+  }
+
+  buscarGeneros(tipo: number, valor: string){
+    
   }
 }

@@ -44,7 +44,11 @@ export class SongService {
     return this.http.delete<Song>(url)
   }
 
-  contarMusicas(): Observable<Song[]>{
-    return this.http.get<Song[]>(this.api  + '/count/song')
+  contarMusicas(): Observable<number>{
+    return this.http.get<number>(this.api  + '/count/song')
+  }
+
+  buscarMusicas(tipo: number, valor: string){
+    
   }
 }

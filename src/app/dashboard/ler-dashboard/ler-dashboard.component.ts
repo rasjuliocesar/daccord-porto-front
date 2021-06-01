@@ -14,9 +14,9 @@ import { GenreService } from 'src/app/services/genre.service';
 })
 export class LerDashboardComponent implements OnInit {
 
-  artist: Artists[]
-  genre: Genre[]
-  song: Song[]
+  artist: number
+  genre: number
+  song: number
 
   constructor(private artistsService: ArtistsService, private songService: SongService, private genreService: GenreService) { }
 
