@@ -24,13 +24,39 @@
         <mat-form-field>
             <input matInput placeholder="Link Áudio" [(ngModel)]="song.link_audio" name="link_audio">
         </mat-form-field>
-<!--    <mat-form-field>
-            <mat-label>Gênero</mat-label>
-            <mat-select name="genero" [(ngModel)]="song.genre">
-                <mat-option value="false">Lista de gêneros</mat-option>
-            </mat-select>
+        
+        <mat-form-field>
+            <input matInput placeholder="Time Signature" [(ngModel)]="song.time_signature" name="time_signature">
         </mat-form-field>
--->
+        
+        <mat-form-field>
+            <input matInput placeholder="Chord Sequence" [(ngModel)]="song.chord_sequence" name="chord_sequence">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Chord Sheet" [(ngModel)]="song.chord_sheet" name="chord_sheet">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Chords" [(ngModel)]="song.chords" name="chords">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Onset Map" [(ngModel)]="song.onset_map" name="onset_map">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Source Url" [(ngModel)]="song.source_url" name="source_url">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Version" [(ngModel)]="song.version" name="version">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Difficulty" [(ngModel)]="song.difficulty" name="difficulty">
+        </mat-form-field>
+
     </form>
 
     <button mat-raised-button (click)="criar()" color="primary">

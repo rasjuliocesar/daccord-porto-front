@@ -16,7 +16,15 @@ export class CriarSongComponent implements OnInit {
     bpm:0,
     genre:0,
     link_audio:'',
-    title:''
+    title:'',
+    time_signature: [],
+    chord_sequence: [],
+    chord_sheet: '',
+    chords: [],
+    onset_map: null,
+    source_url: '',
+    version: '',
+    difficulty: null,
   }
 
   constructor(private songService: SongService, private router: Router) { }
