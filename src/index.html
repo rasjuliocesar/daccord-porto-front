@@ -18,7 +18,7 @@
     google.charts.setOnLoadCallback(drawChartGenre)
     google.charts.setOnLoadCallback(drawChartDificuldade)
     google.charts.setOnLoadCallback(drawChartAcorde)
-    google.charts.setOnLoadCallback(drawChartRankingArtistas)
+    google.charts.setOnLoadCallback(drawChartDificuldadePizza)
 
     function drawChartGenre() {
         const container = document.querySelector('#genre')
@@ -85,33 +85,26 @@
         acorde.draw(data, options)
     }
     
-    function drawChartRankingArtistas() {
-        const container = document.querySelector('#rankingArtistas')
+    function drawChartDificuldadePizza() {
+        const container = document.querySelector('#dificuldadePizza')
         const data = new google.visualization.arrayToDataTable([
-            [ 'Character', 'Ki' ],
-            [ 'Pearl Jam', 100 ],
-            [ 'O Rappa', 9 ],
-            [ 'Anitta', 8 ],
-            [ 'Alok', 5 ],
-            [ 'Leonardo', 70 ],
-            ['Marília Mendonça', 20 ],
-            ['Charllie Brown Jr.', 30 ],
-            ['Lenine', 20 ],
-            ['Gonzaguinha', 50 ],
-            ['Mudo Bita', 85 ],
-            ['Titãs', 10 ]
+            [ 'Character', ''],
+            [ 'Super Fácil', 10000 ],
+            [ 'Fácil', 9000 ],
+            [ 'Médio', 8000 ],
+            [ 'Difícil', 5000 ]
         ])
         const options = {
-            title: 'Músicas  por Artistas',
+            title: 'Músicas  por Dificuldade',
             height: height,
             width: width
         }
 
-        // const chart = new google.visualization.ColumnChart(container)
-        // const chart = new google.visualization.BarChart(container)
-        // const chart = new google.visualization.LineChart(container)
-        const rankingArtistas = new google.visualization.PieChart(container)
-        rankingArtistas.draw(data, options)
+        // const dificuldade = new google.visualization.ColumnChart(container)
+        //const dificuldade = new google.visualization.BarChart(container)
+        // const dificuldade = new google.visualization.LineChart(container)
+         const dificuldade = new google.visualization.PieChart(container)
+        dificuldade.draw(data, options)
     }
   </script>
 </head>
