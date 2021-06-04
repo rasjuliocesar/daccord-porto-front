@@ -1,15 +1,12 @@
 <!--https://material.angular.io/components/checkbox/examples-->
-<mat-card>
-  <h2>Procurar</h2>
-  <mat-form-field class="searching">
-    <mat-label>Procurar...</mat-label>
-    <input matInput type="text" [(ngModel)]="valor">
-  </mat-form-field>
-  <mat-radio-group [(ngModel)]="tipo">
-    <mat-radio-button value="1">Música</mat-radio-button>
-    <mat-radio-button value="2">Artista</mat-radio-button>
-    <mat-radio-button value="3">Gênero</mat-radio-button>
-  </mat-radio-group>
-  <button mat-raised-button (click)="buscar()">Ok</button>
-  {{tipo}}
-</mat-card>
+<mat-radio-group [(ngModel)]="tipo">
+  <mat-radio-button value="1">Música</mat-radio-button>
+  <mat-radio-button value="2">Artista</mat-radio-button>
+  <mat-radio-button value="3">Gênero</mat-radio-button>
+</mat-radio-group>
+<mat-form-field class="searching">
+  <mat-label>Procurar...</mat-label>
+  <input matInput type="text" [(ngModel)]="valor">
+</mat-form-field>
+<button mat-raised-button (click)="buscar()">Ok</button>
+{{tipo}}
