@@ -51,4 +51,12 @@ export class SongService {
   buscarMusicas(tipo: number, valor: string){
     
   }
+
+  chartDificuldade(): Observable<[]>{
+    return this.http.get<[]>(this.api + '/difficulty')
+  }
+
+  chartAcordes(): Observable<[]>{
+    return this.http.get<[]>(this.api + '/chords')
+  }
 }
