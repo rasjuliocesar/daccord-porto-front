@@ -34,9 +34,11 @@ export class LerDashboardComponent implements OnInit {
       this.song = song})
     
     this.songService.chartDificuldade().subscribe(difficulty => {
-      this.difficulty = difficulty})
+      this.difficulty = difficulty 
+    console.log(difficulty)})
 
     this.songService.chartAcordes().subscribe(chords => {
-      this.chords = chords})
+      this.chords = chords
+      console.log(chords)})
   }
 }
