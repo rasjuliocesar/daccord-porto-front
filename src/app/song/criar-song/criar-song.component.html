@@ -10,15 +10,15 @@
         </mat-form-field>
         
         <mat-form-field>
-            <input matInput placeholder="Id Artista" [(ngModel)]="song.artist_id" name="id_artista">
-        </mat-form-field>
-        
-        <mat-form-field>
             <input matInput placeholder="Bpm" [(ngModel)]="song.bpm" name="bpm">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Gênero" [(ngModel)]="song.genre" name="genero">
+            <mat-label>Gênero</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let genre of genres"
+                [value]="genre.name">{{ genre.name }}</mat-option>
+            </mat-select>
         </mat-form-field>
 
         <mat-form-field>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Song } from 'src/app/models/song.model';
 import { SongService } from 'src/app/services/song.service';
+import { Genre } from 'src/app/models/genre.model';
+import { GenreService } from 'src/app/services/genre.service';
 
 @Component({
   selector: 'app-editar-song',
@@ -24,14 +26,21 @@ export class EditarSongComponent implements OnInit {
     difficulty: null,
   }
 
+  genres: Genre[]
+
   constructor(private songService: SongService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private genreService: GenreService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('_id')
     this.songService.lerPorId(id).subscribe(song => {
       this.song = song
+    })
+
+    this.genreService.ler().subscribe(genre => {
+      this.genres = genre
     })
   }
 

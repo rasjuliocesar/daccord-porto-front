@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Song } from 'src/app/models/song.model';
 import { SongService } from 'src/app/services/song.service';
+import { Genre } from 'src/app/models/genre.model';
+import { GenreService } from 'src/app/services/genre.service';
 
 @Component({
   selector: 'app-criar-song',
@@ -24,9 +26,14 @@ export class CriarSongComponent implements OnInit {
     difficulty: null,
   }
 
-  constructor(private songService: SongService, private router: Router) { }
+  genres: Genre[]
+
+  constructor(private songService: SongService, private router: Router, private genreService: GenreService) { }
 
   ngOnInit(): void {
+    this.genreService.ler().subscribe(genre => {
+      this.genres = genre
+    })
   }
 
   criar(): void {

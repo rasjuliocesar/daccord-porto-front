@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Artists } from 'src/app/models/artists.model';
 import { ArtistsService } from 'src/app/services/artists.service';
+import { Genre } from 'src/app/models/genre.model';
+import { GenreService } from 'src/app/services/genre.service';
 
 @Component({
   selector: 'app-editar-artists',
@@ -15,14 +17,21 @@ export class EditarArtistsComponent implements OnInit {
     artist_genre: ''
   }
 
+  genres: Genre[]
+
   constructor(private artistsService: ArtistsService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private genreService: GenreService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('_id')
     this.artistsService.lerPorId(id).subscribe(artists => {
       this.artists = artists
+    })
+
+    this.genreService.ler().subscribe(genre => {
+      this.genres = genre
     })
   }
 

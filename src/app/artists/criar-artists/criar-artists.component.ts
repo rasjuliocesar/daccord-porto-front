@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Artists } from 'src/app/models/artists.model';
+import { Genre } from 'src/app/models/genre.model';
 import { ArtistsService } from 'src/app/services/artists.service';
+import { GenreService } from 'src/app/services/genre.service';
 
 @Component({
   selector: 'app-criar-artists',
@@ -15,9 +17,14 @@ export class CriarArtistsComponent implements OnInit {
     artist_genre: ''
   }
 
-  constructor(private artistsService: ArtistsService, private router: Router) { }
+  genres: Genre[]
+
+  constructor(private artistsService: ArtistsService, private router: Router, private genreService: GenreService) { }
 
   ngOnInit(): void {
+    this.genreService.ler().subscribe(genre => {
+      this.genres = genre
+    })
   }
 
   criar(): void {
@@ -30,5 +37,4 @@ export class CriarArtistsComponent implements OnInit {
   cancelar(): void {
     this.router.navigate(['/artists'])
   }
-
 }
