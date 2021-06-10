@@ -20,7 +20,6 @@ export class CriarSongComponent implements OnInit {
     link_audio:'',
     title:'',
     chord_sheet: '',
-    chords: [],
     source_url: '',
     version: '',
     difficulty: null,

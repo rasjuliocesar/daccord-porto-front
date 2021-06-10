@@ -20,25 +20,36 @@ export class LerDashboardComponent implements OnInit {
   song: number
   difficulty: []
   chords: []
+  data: Array<any>
 
   constructor(private artistsService: ArtistsService, private songService: SongService, private genreService: GenreService) { }
 
   ngOnInit(): void {
     this.artistsService.contarArtistas().subscribe(artist => {
-      this.artist = artist})
-      
+      this.artist = artist
+    })
+
     this.genreService.contarGeneros().subscribe(genre => {
-      this.genre = genre})
+      this.genre = genre
+    })
 
     this.songService.contarMusicas().subscribe(song => {
-      this.song = song})
-    
-    this.songService.chartDificuldade().subscribe(difficulty => {
-      this.difficulty = difficulty 
-    console.log(difficulty)})
+      this.song = song
+    })
 
-    this.songService.chartAcordes().subscribe(chords => {
+    this.songService.chartDificuldade().subscribe(difficulty => {
+      this.difficulty = difficulty
+      //console.log(difficulty)
+    })
+
+/*    this.songService.chartAcordes().subscribe(chords => {
       this.chords = chords
-      console.log(chords)})
+      chords.map((chord, index) => {
+        this.data = Object.entries(chord)
+      })
+      console.log(this.data);
+      
+    })*/
+
   }
 }

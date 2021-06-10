@@ -1,0 +1,17 @@
+Back-End com todos os testes propostos funcionando.
+
+- Não implementado no front
+
+1 - Paginação -> Tempo
+2 - Procurar -> Tempo
+3 - Login -> Skill
+4 - Renderizar Graficos -> Skill
+5 - Importar arquivo Artista e Musicas -> Tempo
+6 - Ordenação por colunas nos metodos de listagem -> Tempo
+7 - Dropdown da lista de generos em musicas e artistas //vou tentar fazer
+
+- Desafios
+Firebase
+Mudança de escopo do projeto
+Tempo
+Divisão das atividades

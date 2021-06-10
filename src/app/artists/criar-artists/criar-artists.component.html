@@ -6,16 +6,12 @@
         <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="artists.artist_name" name="nome">
         </mat-form-field>
-        
+
         <mat-form-field>
-            <mat-label>Gênero</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let genre of genres"
-                [value]="genre.name">{{ genre.name }}</mat-option>
-            </mat-select>
+            <input matInput placeholder="Gênero" [(ngModel)]="artists.artist_genre" name="genero">
         </mat-form-field>
 
-        </form>
+    </form>
 
     <button mat-raised-button (click)="criar()" color="primary">
         Salvar
