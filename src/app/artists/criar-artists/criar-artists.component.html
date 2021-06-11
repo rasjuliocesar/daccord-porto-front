@@ -1,14 +1,17 @@
 <mat-card>
     <mat-card-title>Novo Artista</mat-card-title>
 
-
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="artists.artist_name" name="nome">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Gênero" [(ngModel)]="artists.artist_genre" name="genero">
+            <mat-label>Gênero</mat-label>
+            <mat-select [(value)]="artists.artist_genre">
+                <mat-option *ngFor="let genre of genres"
+                [value]="genre.name">{{ genre.name }}</mat-option>
+            </mat-select>
         </mat-form-field>
 
     </form>

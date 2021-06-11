@@ -22,7 +22,7 @@ export class ProcurarDashboardComponent implements OnInit {
     if(this.tipo == null){
 //msg de erro
     }else if (this.tipo == 1) {
-this.songService.buscarMusicas(this.tipo, this.valor);
+      this.songService.buscarMusicas(this.tipo, this.valor);
     }else if (this.tipo == 2) {
       this.artistsService.buscarArtistas(this.tipo, this.valor); 
     }else {

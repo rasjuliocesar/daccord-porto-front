@@ -59,4 +59,12 @@ export class SongService {
   chartAcordes(): Observable<[]>{
     return this.http.get<[]>(this.api + '/chords')
   }
+
+  chartGeneros(): Observable<[]>{
+    return this.http.get<[]>(this.api + '/genre')
+  }
+
+  chartArtistas(): Observable<[]>{
+    return this.http.get<[]>(this.api + '/artist')
+  }
 }

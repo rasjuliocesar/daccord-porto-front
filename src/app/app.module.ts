@@ -20,6 +20,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './template/header/header.component';
@@ -108,6 +109,7 @@ import { ProcurarDashboardComponent } from './dashboard/procurar-dashboard/procu
     MatSortModule,
     MatCheckboxModule,
     MatRadioModule,
+    GoogleChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

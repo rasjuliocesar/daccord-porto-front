@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Song } from 'src/app/models/song.model';
 import { SongService } from 'src/app/services/song.service';
-import { Artists } from 'src/app/models/artists.model'
 import { ArtistsService } from 'src/app/services/artists.service';
-import { Genre } from 'src/app/models/genre.model'
 import { GenreService } from 'src/app/services/genre.service';
-import { DistinctSubscriber } from 'rxjs/internal/operators/distinct';
+import { Chart } from 'src/app/models/chart.model';
 
 @Component({
   selector: 'app-ler-dashboard',
@@ -20,7 +17,68 @@ export class LerDashboardComponent implements OnInit {
   song: number
   difficulty: []
   chords: []
-  data: Array<any>
+  genres: []
+  artists: []
+
+  chartChords: Chart = {
+    title: 'Músicas por Acordess',
+    type: 'ColumnChart',
+    data: [],
+    columnNames: ['', ''],
+    options: {
+      is3D: true,
+      width: 600,
+      height: 400,
+    }
+  }
+
+  chartDifficulty: Chart = {
+    title: 'Músicas por Dificuldades',
+    type: 'BarChart',
+    data: [],
+    columnNames: ['', ''],
+    options: {
+      is3D: true,
+      width: 600,
+      height: 400,
+    }
+  }
+
+  chartDifficulty2: Chart = {
+    title: 'Músicas por Dificuldades',
+    type: 'PieChart',
+    data: [],
+    columnNames: ['', ''],
+    options: {
+      is3D: true,
+      width: 600,
+      height: 400,
+    }
+  }
+
+  chartGenres: Chart = {
+    title: 'Músicas por Gêneros',
+    type: 'PieChart',
+    data: [],
+    columnNames: ['', ''],
+    options: {
+      is3D: true,
+      width: 600,
+      height: 400,
+    }
+  }
+
+  chartArtists: Chart = {
+    title: 'Músicas por Artistas',
+    type: 'PieChart',
+    data: [],
+    columnNames: ['', ''],
+    options: {
+      is3D: true,
+      width: 600,
+      height: 400,
+    }
+  }
 
   constructor(private artistsService: ArtistsService, private songService: SongService, private genreService: GenreService) { }
 
@@ -39,17 +97,34 @@ export class LerDashboardComponent implements OnInit {
 
     this.songService.chartDificuldade().subscribe(difficulty => {
       this.difficulty = difficulty
-      //console.log(difficulty)
+      difficulty.map(difficulty => {
+        this.chartDifficulty.data.push(Object.entries(difficulty)[0])
+      })
+      difficulty.map(difficulty => {
+        this.chartDifficulty2.data.push(Object.entries(difficulty)[0])
+      })
     })
 
-/*    this.songService.chartAcordes().subscribe(chords => {
+    this.songService.chartAcordes().subscribe(chords => {
       this.chords = chords
-      chords.map((chord, index) => {
-        this.data = Object.entries(chord)
+      chords.map(chord => {
+        this.chartChords.data.push(Object.entries(chord)[0])
       })
-      console.log(this.data);
-      
-    })*/
+    })
+
+    this.songService.chartGeneros().subscribe(genres => {
+      this.genres = genres
+      genres.map(genres => {
+        this.chartGenres.data.push(Object.entries(genres)[0])
+      })
+    })
+
+    this.songService.chartArtistas().subscribe(artists => {
+      this.artists = artists
+      artists.map(artists => {
+        this.chartArtists.data.push(Object.entries(artists)[0])
+      })
+    })
 
   }
 }

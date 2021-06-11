@@ -1,12 +1,3 @@
-<!--<div>
-    <p>TESTANDO VALORES DO GRÁFICO</p>
-    <p>DIFICULDADE: {{difficulty | json}}</p>
-    <p>ACORDES: {{chords}}</p>
-
-    <p>ACORDES: {{data}}</p>
-
-</div>-->
-
 <div class="count">
     <div id="countSong">
         <p>Total de Músicas</p>
@@ -21,15 +12,47 @@
         <span>{{artist}}</span>
     </div>
 </div>
+
 <div class="chart">
     <div class="rowChartOne">
-        <div id="genre"></div>
-        <div id="acorde"></div>
+        <div id="genre">
+            <google-chart *ngIf="chartGenres.data.length > 0" 
+                [title]="chartGenres.title" 
+                [type]="chartGenres.type"
+                [data]="chartGenres.data" 
+                [columns]="chartGenres.columnNames" 
+                [options]="chartGenres.options">
+            </google-chart>
+        </div>
+        <div id="acorde">
+            <google-chart *ngIf="chartChords.data.length > 0" 
+                [title]="chartChords.title" 
+                [type]="chartChords.type"
+                [data]="chartChords.data" 
+                [columns]="chartChords.columnNames" 
+                [options]="chartChords.options">
+            </google-chart>
+        </div>
     </div>
     <div class="rowChartTwo">
-        <div id="dificuldadePizza"></div>
-        <div id="dificuldade"></div>
+        <div id="dificuldadePizza">
+            <google-chart *ngIf="chartDifficulty2.data.length > 0" 
+                [title]="chartDifficulty2.title"
+                [type]="chartDifficulty2.type" 
+                [data]="chartDifficulty2.data" 
+                [columns]="chartDifficulty2.columnNames"
+                [options]="chartDifficulty2.options">
+            </google-chart>
+        </div>
+        <div id="dificuldade">
+            <google-chart *ngIf="chartDifficulty.data.length > 0" 
+                [title]="chartDifficulty.title"
+                [type]="chartDifficulty.type" 
+                [data]="chartDifficulty.data" 
+                [columns]="chartDifficulty.columnNames"
+                [options]="chartDifficulty.options">
+            </google-chart>
+        </div>
     </div>
-</div>
 
-
+    <h1> </h1>
