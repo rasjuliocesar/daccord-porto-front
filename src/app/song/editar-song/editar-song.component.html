@@ -19,9 +19,9 @@
 
         <mat-form-field>
             <mat-label>Gênero</mat-label>
-            <mat-select [(value)]="artists.artist_genre">
+            <mat-select [(value)]="song.genre">
                 <mat-option *ngFor="let genre of genres"
-                [value]="genre.name">{{ genre.name }}</mat-option>
+                [value]="genre.id3">{{ genre.name }}</mat-option>
             </mat-select>
         </mat-form-field>
 
